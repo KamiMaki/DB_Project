@@ -34,7 +34,7 @@ $result = $conn->query($sql);
 <?php
  while($row = $result->fetch_assoc()){
 ?>
-<li ><p><h4><b><?php echo $row['name']?><span style="margin-left:120px;float:right;"><?php echo $row['asset']?></b></h4></p></li>
+<li class="LB" ><p><h4><b><?php echo $row['name']?><span style="margin-left:120px;float:right;"><?php echo $row['asset']?></b></h4></p></li>
 <?php
 }
 ?>

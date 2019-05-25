@@ -21,8 +21,45 @@ session_start();
 	</h1>	  
 </head>
 <body >   
+<?php
+include ("connMySQL.php");
+$ID = $_SESSION['player']['id'];
+$sql = "SELECT * FROM blackjack WHERE PID ='$ID' ";
+$result = $conn->query($sql);
+?>
+<br><br>
+<table border="1">
+　<tr>
+　<td>結果</td><td>莊家點數</td><td>您的點數</td><td>金額</td>
+　</tr>
 
-<button type="button" class="btn btn-primary"  onclick="location.href='home.php'">返回主頁面</button>
+<?php
+ while($row = $result->fetch_assoc()){
+?>
+<tr>
+<td><?php
+if( $row['Result'] == 1)
+{
+	echo "勝利";
+}
+elseif( $row['Result'] == 0)
+{
+	echo "平手";
+}
+else
+{
+	echo "失敗";
+}
+
+
+?></td><td><?php echo $row['Point1']?></td><td><?php echo $row['Point2']?></td><td><?php echo $row['Money']?></td></tr>
+<?php
+}
+?>
+</table>
+<br><br>
+
+<button type="button" class="btn btn-primary"  onclick="location.href='home.php'">返回主畫面</button>    
 </body>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>

@@ -13,6 +13,9 @@ session_start();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.7/packaged/jquery.noty.packaged.min.js"></script>
+	<link rel="stylesheet" href="resources/bootstrap.min.css" charset="utf-8">
+    <link rel="stylesheet" href="resources/experiments.css" charset="utf-8">
+    <link rel="stylesheet" href="resources/utility.css" charset="utf-8">
 </head>
     <body>
 	<h2>
@@ -71,11 +74,11 @@ session_start();
     </table>
     <hr>
 	<div>
-    <input type="button" value = "發牌" id="hit" onclick="hit();"/>
-    <input type="button" id="stand" value = "停" onclick="stand();"/>
+    <input type="button" class="btn btn-primary" value = "發牌" id="hit" onclick="hit();"/>
+    <input type="button" class="btn btn-primary" id="stand" value = "停" onclick="stand();"/>
     <!--<input type="button" id="restart" value="再玩一局 (FIGHT AGAIN)" onclick="location.reload();" />-->	
-    <input type="button" id="restart" value ="再玩一局" onclick="restart();"/>
-	<button type="button"  onclick="location.href='home.php'">返回主頁面</button>
+    <input type="button"  class="btn btn-primary"id="restart" value ="再玩一局" onclick="restart();"/>
+	<button type="button"  class="btn btn-primary" onclick="location.href='home.php'">返回主頁面</button>
 	
 		<script type="text/javascript">
 		$.noty.defaults.theme = 'relax';
@@ -126,6 +129,8 @@ function hit() {
     if(checkIfBust("player2")) {
         document.getElementById("bulletin").innerHTML = "你爆了 (You BUST!)";
 		noty({ text: '你輸了10元',type: 'error',timeout: 2000});
+		var result1 = calcResult("player1");
+        var result2 = calcResult("player2");
         document.getElementById("hit").disabled = true;
         document.getElementById("stand").disabled = true;
         winner = "player1";
@@ -134,7 +139,7 @@ function hit() {
 		$.ajax({
 		type: "post",
 		url:"asset_update.php",
-		data : {asset:asset}
+		data : {asset:asset ,point1:result1,point2:result2,result:-1,money:-10}
 		});
     }
     showScore();
@@ -153,6 +158,8 @@ function stand() {
             document.getElementById("bulletin").innerHTML = "电脑爆了 (Computer BUST!)";
             document.getElementById("hit").disabled = true;
             document.getElementById("stand").disabled = true;
+			var result1 = calcResult("player1");
+            var result2 = calcResult("player2");
 			noty({ text: '你贏了10元',type: 'success',timeout: 2000});
             winner = "player2";
 			asset = asset+10;
@@ -160,7 +167,7 @@ function stand() {
 			$.ajax({
 			type: "POST",
 			url:"asset_update.php",
-			data : {asset:asset}
+			data : {asset:asset ,point1:result1,point2:result2,result:1,money:10}
 			});
 			
 			
@@ -173,6 +180,11 @@ function stand() {
         if (result1 == result2) {
             document.getElementById("bulletin").innerHTML = "平局 (PUSH!)";
 			noty({ text: '平手',type: 'warning',timeout: 2000});
+			$.ajax({
+			type: "POST",
+			url:"asset_update.php",
+			data : {asset:asset ,point1:result1,point2:result2,result:0,money:0}
+			});
         } else if (result1 > result2) {
             document.getElementById("bulletin").innerHTML = "你输了 (You LOSE)";
 			noty({ text: '你輸了10元',type: 'error',timeout: 2000});
@@ -181,7 +193,7 @@ function stand() {
 			$.ajax({
 			type: "POST",
 			url:"asset_update.php",
-			data : {asset:asset}
+			data : {asset:asset ,point1:result1,point2:result2,result:-1,money:-10}
 			});
 		
 			
@@ -193,7 +205,7 @@ function stand() {
 			$.ajax({
 			type: "POST",
 			url:"asset_update.php",
-			data : {asset:asset}
+			data : {asset:asset ,point1:result1,point2:result2,result:1,money:10}
 			});
 				
         }
@@ -342,8 +354,8 @@ function restart() {
 
 
 	</script>
-	<!--<script src="bj.js"></script>-->
 	</div>
+	
 
 </body>
 </html>

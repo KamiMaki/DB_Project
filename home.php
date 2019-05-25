@@ -45,6 +45,7 @@ session_start();
 <button type="button" class="btn btn-primary"  onclick="location.href='Roulette/r.html'">輪盤</button>
 <button type="button" class="btn btn-primary"  onclick="location.href='friend.php'">好友</button>
 <button type="button" class="btn btn-primary"  onclick="location.href='Leaderboard.php'">排行榜</button>
+<button type="button" class="btn btn-primary"  onclick="location.href='Score.php'">戰績統計</button>
 <button type="button" class="btn btn-primary"  onclick="location.href='logout.php'">登出</button>
     
 </body>

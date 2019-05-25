@@ -24,13 +24,13 @@ ul.wrap {
   margin: 0 auto;
 }
 
-li{
+li.LB{
     position: relative;
     padding-left: 30px;
     height: 36px;
     line-height: 36px;
 }
-li:after{
+li.LB:after{
     content: "";
     display: inline-block;
     width: 20px;
@@ -44,14 +44,14 @@ li:after{
     left: 0;
     top: 8px;
 }
-li:first-child:after {content: "1";background: #FD8C84;}
-li:nth-child(2):after {content: "2";background: #FFCC99;}
-li:nth-child(3):after {content: "3";background: #7FD75A;}
-li:nth-child(4):after {content: "4";background: #CCCCFF;}
-li:nth-child(5):after {content: "5";background: #60C4FD;}
-li:nth-child(6):after {content: "6";}
-li:nth-child(7):after {content: "7";}
-li:nth-child(8):after {content: "8";}
+li.LB:first-child:after {content: "1";background: #FD8C84;}
+li.LB:nth-child(2):after {content: "2";background: #FFCC99;}
+li.LB:nth-child(3):after {content: "3";background: #7FD75A;}
+li.LB:nth-child(4):after {content: "4";background: #CCCCFF;}
+li.LB:nth-child(5):after {content: "5";background: #60C4FD;}
+li.LB:nth-child(6):after {content: "6";}
+li.LB:nth-child(7):after {content: "7";}
+li.LB:nth-child(8):after {content: "8";}
 /* Sword Art Online experiment ####################################################################################################### */
 
 .sao-blur-behind:before {
