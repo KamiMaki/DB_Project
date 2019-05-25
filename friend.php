@@ -22,24 +22,7 @@ session_start();
 </head>
 <body >   
 
-<form action="login.php" method="post" style="display:block; margin:auto;" data-toggle="validator">
-	<div class="form-group" style="display:block; margin:auto;">
-		Account: <input type="text" name="name" class="form-control" ><br>
-		Password: <input type="password" name="pw" class="form-control" ><br>
-		<div style="display:block; margin:auto;">
-			<button type="submit" class="btn btn-primary" >登入</button>
-			<button type="button" class="btn btn-primary"  onclick="location.href='register.html'">註冊</button>
-		</div>
-	</div>				
-</form> 
-
-
-
-
-
-<button type="button" class="btn btn-primary"  onclick="location.href='21.php'">21點</button>
-<button type="button" class="btn btn-primary"  onclick="location.href='Roulette/r.html'">輪盤</button>
-<button type="button" class="btn btn-primary"  onclick="location.href='logout.php'">登出</button>    
+<button type="button"  onclick="location.href='home.php'">返回主頁面</button>
 </body>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>

@@ -23,19 +23,10 @@ session_start();
 		echo "您目前有$".$_SESSION['player']['asset'];
 	}
 	?>
-	</h1>
-
-	
-	  
+	</h1>	  
 </head>
 
 <body class="loading" id="page" >   
-
-
-<script>
-   //noty({ text: 'My first notification using noty'});
-</script>
-
 <div class="topcorner">
 <div class="dropdown">
 <button type="button" style="border: 0; background: transparent" data-toggle="dropdown">
@@ -57,23 +48,6 @@ session_start();
 <button type="button" class="btn btn-primary"  onclick="location.href='logout.php'">登出</button>
     
 </body>
- 
-		<script type='text/javascript'>
-							var strUrl = location.search;
-							if (strUrl.indexOf("?") != -1) 
-							{
-								var getSearch = strUrl.split("?");
-								Message('Message',getSearch[1]);
-							}
-							</script>
-     
-    <script type="text/javascript">
-        $(document).ready( function () {
-            var saoMenuOpenAudio = document.getElementById("saoMenuOpenAudio");
-            var saoMenuSelectAudio = document.getElementById("saoMenuSelectAudio");
-        });
-    </script>
-    
     <link rel="stylesheet" href="resources/bootstrap.min.css" charset="utf-8">
     <link rel="stylesheet" href="resources/experiments.css" charset="utf-8">
     <link rel="stylesheet" href="resources/utility.css" charset="utf-8">

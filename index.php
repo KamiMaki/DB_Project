@@ -72,22 +72,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
     <script src="resources/experiments.js"></script>
-		<script type='text/javascript'>
-							var strUrl = location.search;
-							if (strUrl.indexOf("?") != -1) 
-							{
-								var getSearch = strUrl.split("?");
-								Message('Message',getSearch[1]);
-							}
-							</script>
-     
-    <script type="text/javascript">
-        $(document).ready( function () {
-            var saoMenuOpenAudio = document.getElementById("saoMenuOpenAudio");
-            var saoMenuSelectAudio = document.getElementById("saoMenuSelectAudio");
-        });
-    </script>
-    
     <link rel="stylesheet" href="resources/bootstrap.min.css" charset="utf-8">
     <link rel="stylesheet" href="resources/experiments.css" charset="utf-8">
     <link rel="stylesheet" href="resources/utility.css" charset="utf-8">

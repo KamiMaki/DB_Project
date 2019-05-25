@@ -19,15 +19,6 @@ session_start();
 	}
 	?>
 	</h1>	  
-	<style type="text/css">
-    tab1 { padding-left: 4em; }
-    tab2 { padding-left: 8em; }
-	.tab {
-    position: absolute;
-    left: 4em;
-   }
-
-</style>
 </head>
 <body >   
 <?php
@@ -35,11 +26,6 @@ include ("connMySQL.php");
 $sql = "SELECT * FROM player ORDER BY asset DESC";
 $result = $conn->query($sql);
 ?>
-<!--<table width="700" border="1">
-  <tr>
-    <td>玩家暱稱</td>
-    <td>資產</td>
-  </tr>-->
 <br><br>
 <h4><p align=center><b>玩家暱稱 <span style="margin-left:165px;">資產</span></b></p></h4>
 
@@ -52,8 +38,6 @@ $result = $conn->query($sql);
 <?php
 }
 ?>
-<!--</table>-->
-
 <br><br>
 
 <button type="button" class="btn btn-primary"  onclick="location.href='home.php'">返回主畫面</button>    
