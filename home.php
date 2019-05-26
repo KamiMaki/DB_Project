@@ -14,6 +14,7 @@ session_start();
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.7/packaged/jquery.noty.packaged.min.js"></script>
     <script src="resources/experiments.js"></script>
     <title>主頁面</title>
+	<marquee scrollamount="10" bgcolor="#FFFF00" style="color:#FF0000"><?php for ( $i=0 ; $i<20 ; $i++ ) { echo "發大財&emsp;&emsp;&emsp;&emsp;";}?></marquee>
 	<h1>
 	<?php
 	if(isset($_SESSION))
@@ -46,6 +47,7 @@ session_start();
 <button type="button" class="btn btn-primary"  onclick="location.href='friend.php'">好友</button>
 <button type="button" class="btn btn-primary"  onclick="location.href='Leaderboard.php'">排行榜</button>
 <button type="button" class="btn btn-primary"  onclick="location.href='Score.php'">戰績統計</button>
+<button type="button" class="btn btn-primary"  onclick="location.href='fun.php'">笑話區</button>
 <button type="button" class="btn btn-primary"  onclick="location.href='logout.php'">登出</button>
     
 </body>
