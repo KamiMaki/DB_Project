@@ -9,13 +9,13 @@ session_start();
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>主頁面</title>
-	<h1>
+	<h1 style="font-family:Microsoft JhengHei;">
 	<?php
 	if(isset($_SESSION))
 	{
 		echo $_SESSION['player']['name']." 歡迎\n";
 		echo '<br>';
-		echo "您目前有$".$_SESSION['player']['asset'];
+		echo "您目前有籌碼".$_SESSION['player']['asset']."枚";
 	}
 	?>
 	</h1>	  

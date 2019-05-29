@@ -7,10 +7,13 @@
 
 body {
    /*background-image: url('https://imgur.com/VRNsY4W');*/
+    font-family:Microsoft JhengHei;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
+
+	
 }
 
 body.modal-open {

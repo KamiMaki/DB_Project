@@ -64,15 +64,16 @@ $reset = $('#reset'),
 $data = $('.data'),
 $mask = $('.mask'),
 maskDefault = 'Place Your Bets',
-timer = 9000;
+timer = 900;
 
 var red = [32,28,21,25,34,27,36,30,23,5,16,1,14,9,18,7,12,3];
 
 $spin.on('click',function(){
 
     // get a random number between 0 and 36 and apply it to the nth-child selector
-    var  randomNumber = Math.floor(Math.random() * 36),
-    color = null;
+    var  randomNumber = Math.floor(Math.random() * 36),color = null;
+	document.write(randomNumber);
+	document.write("5656");
     $inner.attr('data-spinto', randomNumber).find('li:nth-child('+ randomNumber +') input').prop('checked','checked');
     // prevent repeated clicks on the spin button by hiding it
     $(this).hide();
@@ -91,6 +92,8 @@ $spin.on('click',function(){
     $('.result-number').text(randomNumber);
     $('.result-color').text(color);
     $('.result').css({'background-color': ''+color+''});
+	var rm = document.getElementById('result_num');
+	rm.innerHTML = randomNumber;
 
     $thisResult = '<li class="previous-result color-'+ color +'"><span class="previous-number">'+ randomNumber +'</span><span class="previous-color">'+ color +'</span></li>';
 

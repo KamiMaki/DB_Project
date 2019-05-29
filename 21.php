@@ -17,8 +17,8 @@ session_start();
     <link rel="stylesheet" href="resources/experiments.css" charset="utf-8">
     <link rel="stylesheet" href="resources/utility.css" charset="utf-8">
 </head>
-    <body>
-	<h2>
+    <body style="background-color: #4CAF50;">
+	<h2 style="font-family:Microsoft JhengHei;color:white;">
 		<?php
 		if(isset($_SESSION))
 		{
@@ -27,12 +27,12 @@ session_start();
 			echo '<br>';
 		}
 		?>
-		<p id="p1"></p>
+		<p id="p1" style="font-family:Microsoft JhengHei;"></p>
 		<script>
 		var asset = <?php echo $asset ?>;
 		function print_asset()
 		{
-			document.getElementById("p1").innerHTML = "您目前有"+asset+"元";
+			document.getElementById("p1").innerHTML = "您目前有籌碼"+asset+"枚";
 		}
 		print_asset();
 		</script>
@@ -40,7 +40,7 @@ session_start();
     <table width="100%">
       <tr> 
         <td>
-          <div align="left">
+          <div align="left" style="font-family:Microsoft JhengHei;color:white;font-size:20px;">
            Black Jack
           </div>
         </td>
@@ -65,10 +65,10 @@ session_start();
     <table>
       <tr> 
         <td>
-          <div id="score"></div>
+          <div id="score" style="font-family:Microsoft JhengHei;color:white;font-size:20px;"></div>
         </td>
         <td>
-          <div id="bulletin">Please make a choice</div>
+          <div id="bulletin" style="font-family:Microsoft JhengHei;color:white;font-size:20px;">Please make a choice</div>
         </td>
       </tr>
     </table>

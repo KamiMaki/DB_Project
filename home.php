@@ -12,23 +12,25 @@ session_start();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.7/packaged/jquery.noty.packaged.min.js"></script>
+	<link rel="stylesheet" href="resources/bootstrap.min.css" charset="utf-8">
+    <link rel="stylesheet" href="resources/experiments.css" charset="utf-8">
+    <link rel="stylesheet" href="resources/utility.css" charset="utf-8">
     <script src="resources/experiments.js"></script>
     <title>主頁面</title>
-	<marquee scrollamount="10" bgcolor="#FFFF00" style="color:#FF0000"><?php for ( $i=0 ; $i<20 ; $i++ ) { echo "發大財&emsp;&emsp;&emsp;&emsp;";}?></marquee>
-	<h1>
+	<marquee scrollamount="10" bgcolor="#FFFF00" behavior="alternate" style="color:#FF0000"><?php for ( $i=0 ; $i<20 ; $i++ ) { echo "發大財&emsp;&emsp;&emsp;&emsp;";}?></marquee>
+	<h1  style="font-family:Microsoft JhengHei;color:white;" >
 	<?php
 	if(isset($_SESSION))
 	{
 		echo $_SESSION['player']['name']." 歡迎\n";
 		echo '<br>';
-		echo "您目前有$".$_SESSION['player']['asset'];
+		echo "您目前有籌碼".$_SESSION['player']['asset']."枚";
 	}
 	?>
 	</h1>	  
 </head>
-
-<body class="loading" id="page" >   
-<div class="topcorner">
+<body background="https://i.imgur.com/VRNsY4W.jpg">
+<!--<div class="topcorner">
 <div class="dropdown">
 <button type="button" style="border: 0; background: transparent" data-toggle="dropdown">
 <img src="resources/add-friend.png" width="70" height="70" />
@@ -40,18 +42,17 @@ session_start();
     <li><a href="#">JavaScript</a></li>
   </ul>
 </div>
-</div>
+</div>-->
 
 <button type="button" class="btn btn-primary"  onclick="location.href='21.php'">21點</button>
-<button type="button" class="btn btn-primary"  onclick="location.href='Roulette/r.html'">輪盤</button>
+<button type="button" class="btn btn-primary"  onclick="location.href='Roulette/r.php'">輪盤</button>
 <button type="button" class="btn btn-primary"  onclick="location.href='friend.php'">好友</button>
 <button type="button" class="btn btn-primary"  onclick="location.href='Leaderboard.php'">排行榜</button>
 <button type="button" class="btn btn-primary"  onclick="location.href='Score.php'">戰績統計</button>
-<button type="button" class="btn btn-primary"  onclick="location.href='fun.php'">笑話區</button>
+<button type="button" class="btn btn-primary"  onclick="location.href='fun.php'">笑話影片區</button>
+<button type="button" class="btn btn-primary"  onclick="location.href='Store.php'">商城</button>
 <button type="button" class="btn btn-primary"  onclick="location.href='logout.php'">登出</button>
     
 </body>
-    <link rel="stylesheet" href="resources/bootstrap.min.css" charset="utf-8">
-    <link rel="stylesheet" href="resources/experiments.css" charset="utf-8">
-    <link rel="stylesheet" href="resources/utility.css" charset="utf-8">
+
 </html>
