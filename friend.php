@@ -12,11 +12,11 @@ session_start();
             <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
             <script src="resources/experiments.js"></script>
-            <link rel="stylesheet" href="resources/bootstrap.min.css" charset="utf-8">
-            <link rel="stylesheet" href="resources/experiments.css" charset="utf-8">
+            <link rel="stylesheet" href="resources/bootstrap.min.css?v=<?=time();?>" charset="utf-8">
+            <link rel="stylesheet" href="resources/experiments.css?v=<?=time();?>" charset="utf-8">
             <link rel="stylesheet" href="resources/utility.css" charset="utf-8">
     <title>主頁面</title>
-	<h1>
+	<h1 class="one" style="font-family:Microsoft JhengHei;color:#ffffff;">
     <?php
 	if(isset($_SESSION))
 	{
@@ -28,8 +28,8 @@ session_start();
     ?>
 	</h1>	  
 </head>
-<body >   
-
+<body background="https://i.imgur.com/VRNsY4W.jpg">   
+<p style="color:#ffffff; font-size:30px;">
 <?php
     include ("connMySQL.php");
     echo "您的好友列表：";
@@ -45,15 +45,15 @@ session_start();
         }
     echo '<br>';
 ?>
+</p>
 
-
-       <form action="add_friend.php" method="post">
+       <form action="add_friend.php" method="post" style="color:#ffffff; font-size:30px;">
            搜尋欲加入之使用者名稱: <input type="text" name="name"></p>
            
            <button type="submit" class="btn btn-primary"  onclick="location.href='add_friend.php'">新增好友</button>
               </form>
 
-            <form action="delete_friend.php" method="post">
+            <form action="delete_friend.php" method="post" style="color:#ffffff; font-size:30px;">
             欲刪除之使用者名稱: <input type="text" name="dname"></p>
             <button type="submit" class="btn btn-primary"  onclick="location.href='delete_friend.php'">刪除好友</button>
             </form>

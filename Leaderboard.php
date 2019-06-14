@@ -9,7 +9,7 @@ session_start();
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>主頁面</title>
-	<h1 style="font-family:Microsoft JhengHei;">
+	<h1 class="one" style="font-family:Microsoft JhengHei;color:#ffffff;">
 	<?php
 	if(isset($_SESSION))
 	{
@@ -20,24 +20,26 @@ session_start();
 	?>
 	</h1>	  
 </head>
-<body >   
+<body background="https://i.imgur.com/VRNsY4W.jpg">   
 <?php
 include ("connMySQL.php");
 $sql = "SELECT * FROM player ORDER BY asset DESC";
 $result = $conn->query($sql);
 ?>
-<br><br>
-<h4><p align=center><b>玩家暱稱 <span style="margin-left:165px;">資產</span></b></p></h4>
+<div class="block">
+<h2><p align=center><b>玩家暱稱 <span style="margin-left:200px;">資產</span></b></p></h2>
 
 
 <ul class="wrap">
 <?php
  while($row = $result->fetch_assoc()){
 ?>
-<li class="LB" ><p><h4><b><?php echo $row['name']?><span style="margin-left:120px;float:right;"><?php echo $row['asset']?></b></h4></p></li>
+<li class="LB" ><p><h2><b><?php echo $row['name']?><p style="float:right;margin-left:100px;"><?php echo $row['asset']?></b></h2></p></p></li>
 <?php
 }
 ?>
+</div>
+
 <br><br>
 
 <button type="button" class="btn btn-primary"  onclick="location.href='home.php'">返回主畫面</button>    
@@ -46,7 +48,7 @@ $result = $conn->query($sql);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
     <script src="resources/experiments.js"></script>
-    <link rel="stylesheet" href="resources/bootstrap.min.css" charset="utf-8">
-    <link rel="stylesheet" href="resources/experiments.css" charset="utf-8">
+    <link rel="stylesheet" href="resources/bootstrap.min.css?v=<?=time();?>" charset="utf-8">
+    <link rel="stylesheet" href="resources/experiments.css?v=<?=time();?>" charset="utf-8">
     <link rel="stylesheet" href="resources/utility.css" charset="utf-8">
 </html>

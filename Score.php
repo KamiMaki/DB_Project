@@ -21,7 +21,7 @@ session_start();
 	});
 	</script>
     <title>主頁面</title>
-	<h1>
+	<h1 class="one" style="font-family:Microsoft JhengHei;color:#ffffff;">
 	<?php
 	if(isset($_SESSION))
 	{
@@ -33,7 +33,7 @@ session_start();
 	</h1>	
 	
 </head>
-<body >   
+<body background="https://i.imgur.com/VRNsY4W.jpg">   
 <?php
 include ("connMySQL.php");
 $ID = $_SESSION['player']['id'];
@@ -41,8 +41,8 @@ $sql = "SELECT * FROM blackjack WHERE PID ='$ID' ";
 $result = $conn->query($sql);
 ?>
 <br><br>
-<h1>21點</h1>
-<table id="myTable" class="tablesorter-blue">
+<h1 style="font-family:Microsoft JhengHei;color:#ffffff;">21點</h1>
+<table id="myTable" class="tablesorter-blue"style="font-family:Microsoft JhengHei;color:#ffffff;">
 <thead>
 　<tr>
 　<th>結果</th><th>莊家點數</th><th>您的點數</th><th>金額</th>
@@ -83,16 +83,18 @@ $win= $row['count'];
 $rate = round($win/$num*100, 2);
 ?>
 </table>
+<h2 style="font-family:Microsoft JhengHei;color:#ffffff;">
 <?php
 echo"遊玩次數:$num  勝利次數:$win  勝率:$rate%";
 ?>
+</h2>
 <br><br>
-<h1>輪盤</h1>
-<button type="button" class="btn btn-primary"  onclick="location.href='home.php'">返回主畫面</button>    
+<h1 style="font-family:Microsoft JhengHei;color:#ffffff;">輪盤</h1>
+<button type="button" class="btn btn-primary topcorner" onclick="location.href='home.php'">返回主畫面</button>    
 </body>
 
     <script src="resources/experiments.js"></script>
-    <link rel="stylesheet" href="resources/bootstrap.min.css" charset="utf-8">
-    <link rel="stylesheet" href="resources/experiments.css" charset="utf-8">
+    <link rel="stylesheet" href="resources/bootstrap.min.css?v=<?=time();?>" charset="utf-8">
+    <link rel="stylesheet" href="resources/experiments.css?v=<?=time();?>" charset="utf-8">
     <link rel="stylesheet" href="resources/utility.css" charset="utf-8">
 </html>

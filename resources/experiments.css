@@ -4,7 +4,7 @@
     src:
         url("sword_art_online_font_by_darkblackswords-d5nssbp.otf")
 }
-
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 body {
    /*background-image: url('https://imgur.com/VRNsY4W');*/
     font-family:Microsoft JhengHei;
@@ -16,6 +16,7 @@ body {
 	
 }
 
+
 body.modal-open {
     overflow-y: scroll !important;
 }
@@ -25,6 +26,45 @@ ul{
 ul.wrap {
   display: table;
   margin: 0 auto;
+}
+
+
+.block {
+	position: relative;
+	margin: 100px auto 0;
+	width: 600px;
+	height: auto;
+	background: #ffffff;
+}
+
+.block:before, .block:after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+		#0000ff, #00ff00,#ffff00, #ff0000);
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: steam 20s linear infinite;
+}
+.mine:hover{cursor:url('resources/Diamond Pickaxe (normal).cur');}
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.block:after {
+	filter: blur(50px);
 }
 
 li.LB{
@@ -75,11 +115,24 @@ li.LB:nth-child(8):after {content: "8";}
     margin: -10px;
     clip-path: inset(10px 9px 9px 10px);
 }
+h1.one {
+  border-style: double;
+  border-width: 10px;
+  border-color: #ffffff;
+  background-color:#BC9035;
+  width: 450px;
 
+
+}
 
 .topcorner{
    position:absolute;
    top:0;
+   right:0;
+  }
+  .topcorner1{
+   position:absolute;
+   top:60px;
    right:0;
   }
 

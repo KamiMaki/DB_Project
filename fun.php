@@ -12,11 +12,11 @@ session_start();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
     <script src="resources/experiments.js"></script>
-    <link rel="stylesheet" href="resources/bootstrap.min.css" charset="utf-8">
-    <link rel="stylesheet" href="resources/experiments.css" charset="utf-8">
+    <link rel="stylesheet" href="resources/bootstrap.min.css?v=<?=time();?>" charset="utf-8">
+    <link rel="stylesheet" href="resources/experiments.css?v=<?=time();?>" charset="utf-8">
     <link rel="stylesheet" href="resources/utility.css" charset="utf-8">
     <title>主頁面</title>
-	<h1 style="font-family:Microsoft JhengHei;">
+	<h1 class="one" style="font-family:Microsoft JhengHei;color:#ffffff;">
 	<?php
 	if(isset($_SESSION))
 	{
@@ -27,11 +27,12 @@ session_start();
 	?>
 	</h1>	  
 </head>
-<body >   
-<input id="number" type="number">
-<button onclick="getjoke()">確定</button>
+<body background="https://i.imgur.com/VRNsY4W.jpg">   
+<input id="number" type="number" >
+<button onclick="getjoke()" >確定</button>
 <br>
-<h1 >笑話</h1>
+<h1 style="font-family:Microsoft JhengHei;color:#ffffff; ">笑話</h1>
+<p >
 <script type="text/javascript">
 function getjoke()
 {
@@ -48,12 +49,14 @@ function getjoke()
 			});
 }
 </script>
+</p>
 <textarea cols="50" rows="15" id="joke_area" >
 </textarea>
 <br>
-<h1 >影片</h1>
+<h1 style="font-family:Microsoft JhengHei;color:#ffffff;">影片</h1>
 <input id="number2" type="number">
 <button onclick="getyt()">確定</button>
+<p >
 <script type="text/javascript">
 function getyt()
 {
@@ -72,6 +75,7 @@ function getyt()
 			});
 }
 </script>
+</p>
 <br>
 <object id = "yt" width="560" height="315" data="" type="application/x-shockwave-flash"><param id = "yt2" name="src" value="" / ></object>
 <br>

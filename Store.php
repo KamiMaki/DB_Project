@@ -16,9 +16,9 @@ session_start();
 	</head>
     <body style="background-color:lightgreen;">
         <div class="main-container">
-         <button type="button"  class="btn btn-primary" onclick="location.href='home.php'">返回主頁面</button>
+         <button type="button"  class="btn btn-primary topcorner" onclick="location.href='home.php'">返回主頁面</button>
 		 <br>
-		 <h2 style="font-family:Microsoft JhengHei;">
+		 <h1 class="one" style="font-family:Microsoft JhengHei;color:#ffffff;" >
         <?php
         if(isset($_SESSION))
         {
@@ -36,7 +36,7 @@ session_start();
 		}
 		print_asset();
 		</script>
-		
+		</h1>
 		<br><br><br>
                 <hr>
             <h2 class="s-title" align="center">籌碼區</h2>
@@ -253,4 +253,7 @@ session_start();
             </div>
         </div>
 	</body>
+	 <link rel="stylesheet" href="resources/bootstrap.min.css?v=<?=time();?>" charset="utf-8">
+    <link rel="stylesheet" href="resources/experiments.css?v=<?=time();?>" charset="utf-8">
+    <link rel="stylesheet" href="resources/utility.css" charset="utf-8">
 </html>

@@ -9,8 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
     <script src="resources/experiments.js"></script>
-    <link rel="stylesheet" href="resources/bootstrap.min.css" charset="utf-8">
-    <link rel="stylesheet" href="resources/experiments.css" charset="utf-8">
+    <link rel="stylesheet" href="resources/bootstrap.min.css?v=<?=time();?>" charset="utf-8">
+    <link rel="stylesheet" href="resources/experiments.css?v=<?=time();?>" charset="utf-8">
     <link rel="stylesheet" href="resources/utility.css" charset="utf-8">
     <title>登入頁面</title>
 	
@@ -18,6 +18,7 @@
 </head>
 
 <body class="loading" id="page" background="https://i.imgur.com/VRNsY4W.jpg">   
+ <img src="resources/logo.png" style="display:block; margin:auto;"/>
     <div class="experimentSAOModalRoot">
             <div class="container p-a-2 experiment card experimentSAOModal sao-blur-behind text-info">
                 <div class="row">
