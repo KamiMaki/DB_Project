@@ -17,7 +17,7 @@ session_start();
     <link rel="stylesheet" href="resources/experiments.css?v=<?=time();?>" charset="utf-8">
     <link rel="stylesheet" href="resources/utility.css" charset="utf-8">
 </head>
-    <body style="background-color: #4CAF50;">
+    <body background="https://i.imgur.com/VRNsY4W.jpg">
 	<h1 class="one" style="font-family:Microsoft JhengHei;color:#ffffff;"">
 		<?php
 		if(isset($_SESSION))

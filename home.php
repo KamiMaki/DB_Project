@@ -17,6 +17,7 @@ session_start();
     <link rel="stylesheet" href="resources/experiments.css?v=<?=time();?>" charset="utf-8">
     <link rel="stylesheet" href="resources/utility.css" charset="utf-8">
     <script src="resources/experiments.js"></script>
+
     <title>主頁面</title>
 	<marquee scrollamount="10" bgcolor="#FFFF00" behavior="alternate" style="color:#FF0000; font-size:40px"><?php for ( $i=0 ; $i<20 ; $i++ ) { echo "發大財&emsp;&emsp;&emsp;&emsp;";}?></marquee>
 	
@@ -32,7 +33,9 @@ session_start();
 	</h1>	  
 	
 </head>
-<body background="https://i.imgur.com/VRNsY4W.jpg">
+
+<body background="https://i.imgur.com/VRNsY4W.jpg" id="particles-js">
+
 <!--<div class="topcorner">
 <div class="dropdown">
 <button type="button" style="border: 0; background: transparent" data-toggle="dropdown">
@@ -46,7 +49,7 @@ session_start();
   </ul>
 </div>
 </div>-->
-<div>
+<div >
     <a href="21.php" style="color:#ffffff;float:left; margin:30px">
     <img src="resources/bj.png" width="220" height="220" />
 	<h3 style="font-family:Lato; text-align:center;">BlackJack</h3>
@@ -68,7 +71,7 @@ session_start();
   </a>
   <br>
   </div>
-  <div style="clear: both">
+  <div style="clear: both" >
       <a href="Score.php" style="color:#ffffff;float:left; margin:30px">
     <img src="resources/graph.png" width="220" height="220" />
 	<h3 style="font-family:Lato;text-align:center;">Score</h3>
@@ -104,7 +107,9 @@ session_start();
 <button type="button" class="btn btn-primary"  onclick="location.href='Store.php'">商城</button>
 <button type="button" class="btn btn-primary"  onclick="location.href='cookie.php'">挖礦區</button>
 <button type="button" class="btn btn-primary"  onclick="location.href='logout.php'">登出</button>-->
-    
+   
 </body>
-
+	<script src="resources/particles.js"></script>
+	<script src="resources/app.js"></script>
+	
 </html>

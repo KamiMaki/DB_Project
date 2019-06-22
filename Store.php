@@ -14,7 +14,7 @@ session_start();
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.7/packaged/jquery.noty.packaged.min.js"></script>
 	</head>
-    <body style="background-color:lightgreen;">
+   <body background="https://i.imgur.com/VRNsY4W.jpg">
         <div class="main-container">
          <button type="button"  class="btn btn-primary topcorner" onclick="location.href='home.php'">返回主頁面</button>
 		 <br>
@@ -38,18 +38,19 @@ session_start();
 		</script>
 		</h1>
 		<br><br><br>
-                <hr>
-            <h2 class="s-title" align="center">籌碼區</h2>
+               
+            <h2 align="center" style="font-family:Microsoft JhengHei;color:#ffffff;">籌碼區</h2>
         </div>
         <table width="100%" style="table-layout:fixed">
             <tr align="center">
-                <td class="le_1" >
+                <td  >
                     <div class="card-container">
                         <div class="swiper-container card-goods-list swiper-container-horizontal">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide card swiper-slide-active" style="width: 259.667px; margin-right: 30px;">
                                     <div class="display:inline;"><img src="resources/one_coin.png" alt="100顆籌碼"></div>
                                         <span class="info">
+										<br><br>
                                             <h3 class="name">100顆籌碼</h3>
                                                 <div><span class="discount">售價$NT<span>150</span></span></div>
 
@@ -87,7 +88,7 @@ session_start();
                                         </span>
                                 </div>
                  </td>
-                <td class="le_1">
+                <td >
                     <div class="swiper-slide card swiper-slide-next" style="width: 259.667px; margin-right: 30px;">
                             <div class="display:inline;"><img src="resources/pile_coin.jpg" alt="500顆籌碼"></div>
                                 <span class="info">
@@ -126,9 +127,9 @@ session_start();
                                 </span>
                     </div>
                 </td>
-                <td class="le_1">
+                <td >
                     <div class="swiper-slide card" style="width: 259.667px; margin-right: 30px;">
-                            <div class="display:inline;"><img src="resources/bag_coin.jpg" alt="1000顆籌碼"></div>
+                            <div class="display:inline;" ><img src="resources/bag_coin.jpg" alt="1000顆籌碼"></div>
                                 <span class="info">
                                      <h3 class="name">1000顆籌碼</h3>
                                         <div><span class="discount">售價$NT<span>1400</span></span></div>
@@ -165,7 +166,7 @@ session_start();
                                 </span>
                         </div>
                 </td>
-                <td class="le_1">
+                <td >
                     <div class="swiper-slide card" style="width: 259.667px; margin-right: 30px;">
                             <div class="display:inline;"><img src="resources/box_coin.jpg" alt="2000顆籌碼"></div>
                                 <span class="info">
@@ -209,13 +210,13 @@ session_start();
                 <div class="card-next card-goods-next"></div>
                 <div class="card-prev card-goods-prev swiper-button-disabled"></div>
                 </div>
-                <div class="container">
-                <h2 class="s-title" align="center">其他道具</h2>
+                <div >
+                <h2  align="center" style="font-family:Microsoft JhengHei;color:#ffffff;">其他道具</h2>
                 </div>
                 <div class="card-container">
                     <table width="100%" style="table-layout:fixed">
                         <tr align="center">
-                            <td class="le_1">
+                            <td >
                                 <div class="swiper-container card-event-list swiper-container-horizontal">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide card swiper-slide-active" style="width: 259.667px; margin-right: 30px;">
